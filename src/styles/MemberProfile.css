@@ -1,0 +1,80 @@
+.TitleAndButtons{
+    position: fixed;
+    top: 100px;
+    left:45%;
+}
+
+
+.MessageSection{
+    position: fixed;
+    height: 100vh;
+    top: 20%;
+    width: 80%;
+    left:20%;
+}
+
+
+.MessageSection textarea{
+    width: 70%;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+}
+
+.MessageSection .chat {
+    height: 60%;
+    width: 70%;
+    background-color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: black;
+}
+
+.MessageSection .chat .chatName {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the chat name */
+    background-color: rgb(41, 41, 194);
+   
+    height: 80px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  /* Close button on the right */
+  .MessageSection .chat .chatName button {
+    position: absolute;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .MessageSection .chat .chatName button :hover{
+    background-color: white;
+    color:red
+  }
+
+
+
+.textSection {
+  word-wrap: break-word;       
+  
+      
+  max-width: 100%;             
+  padding: 10px;               
+  overflow-y: auto;
+  height: 80%;            
+}
+
+
+  
+
+
+

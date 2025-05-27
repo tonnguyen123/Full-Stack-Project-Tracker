@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Project and Study Tracker\\project-tracker\\src\\api\\ProjectTrackerAPI\\wwwroot\\UploadedFiles\\3f2ee8c8-e80c-4ef6-ab57-9eb88ba9ffaa.png",
+      "PackagePath": "staticwebassets\\UploadedFiles\\3f2ee8c8-e80c-4ef6-ab57-9eb88ba9ffaa.png"
+    },
+    {
+      "Id": "C:\\Project and Study Tracker\\project-tracker\\src\\api\\ProjectTrackerAPI\\wwwroot\\UploadedFiles\\4dba685d-dbb8-4e30-b19e-79c0f3274f5e.png",
+      "PackagePath": "staticwebassets\\UploadedFiles\\4dba685d-dbb8-4e30-b19e-79c0f3274f5e.png"
+    },
+    {
+      "Id": "C:\\Project and Study Tracker\\project-tracker\\src\\api\\ProjectTrackerAPI\\wwwroot\\UploadedFiles\\50cbf541-cf54-4ec4-96c1-ae223cae1a60.png",
+      "PackagePath": "staticwebassets\\UploadedFiles\\50cbf541-cf54-4ec4-96c1-ae223cae1a60.png"
+    },
+    {
+      "Id": "C:\\Project and Study Tracker\\project-tracker\\src\\api\\ProjectTrackerAPI\\wwwroot\\UploadedFiles\\9391d9d2-a851-465b-a6ab-acb1cff4c772.png",
+      "PackagePath": "staticwebassets\\UploadedFiles\\9391d9d2-a851-465b-a6ab-acb1cff4c772.png"
+    },
+    {
+      "Id": "C:\\Project and Study Tracker\\project-tracker\\src\\api\\ProjectTrackerAPI\\wwwroot\\UploadedFiles\\a313b205-d884-4f9e-abc8-3e9a94d83b34.txt",
+      "PackagePath": "staticwebassets\\UploadedFiles\\a313b205-d884-4f9e-abc8-3e9a94d83b34.txt"
+    },
+    {
+      "Id": "C:\\Project and Study Tracker\\project-tracker\\src\\api\\ProjectTrackerAPI\\wwwroot\\UploadedFiles\\ec4fe250-d6da-4e4f-9644-5175ce460e99.txt",
+      "PackagePath": "staticwebassets\\UploadedFiles\\ec4fe250-d6da-4e4f-9644-5175ce460e99.txt"
+    },
+    {
+      "Id": "C:\\Project and Study Tracker\\project-tracker\\src\\api\\ProjectTrackerAPI\\wwwroot\\UploadedFiles\\test.txt",
+      "PackagePath": "staticwebassets\\UploadedFiles\\test.txt"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.ProjectTrackerAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.ProjectTrackerAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.ProjectTrackerAPI.props",
+      "PackagePath": "build\\ProjectTrackerAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.ProjectTrackerAPI.props",
+      "PackagePath": "buildMultiTargeting\\ProjectTrackerAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.ProjectTrackerAPI.props",
+      "PackagePath": "buildTransitive\\ProjectTrackerAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

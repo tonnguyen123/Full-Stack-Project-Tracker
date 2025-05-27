@@ -1,0 +1,119 @@
+.ChangePassword {
+    
+
+
+
+    align-self: center;
+    align-content: center;
+    margin-top: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    background-color: red;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+
+
+.UpdaeInfo button{
+
+    background-color: blue;
+    margin-left: 10px;
+}
+
+.UpdaeInfo{
+    display: absolute;
+    margin-bottom: 100%;
+    flex-direction: row;
+    gap:30%;
+}
+
+.PasswordInput{
+    margin-bottom: 10px;
+    
+   
+}
+
+
+.verifyEmail h4{
+    margin-top: 15%;
+}
+
+.verifyEmail .close-button{
+
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    background: none;
+    border: none;
+    margin-bottom: 5px;
+    
+}
+
+.PasswordInput input{
+    width: 90%;
+}
+
+
+
+
+@media (max-width: 650px) {
+    .ChangePassword button{
+      width: 100px; /* Adjust to 50% width for medium and larger screens */
+      font-size: 11px;
+    };
+
+    
+
+
+  }
+
+
+
+.ChangePassword .changePassButton{
+    display: flex;
+    align-self: center;
+
+}
+
+.PasswordFrom{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+
+}
+
+.verifyEmail{
+
+    position:fixed;
+    top:15%;
+    flex-direction: column;
+    left: 39%;
+    width: 15%;
+    border-radius: 5px;
+    border-color: brown;
+    background-color: green;
+    margin: 5px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+    
+}
+
+
+.NavigationBar{
+    width: 100%;
+    top: 0;
+    position:fixed;
+    display:flex;
+    background-color: rgb(127, 255, 185);
+    justify-content: center;
+    gap: 10px;
+   
+    top:0;
+    left:0;
+}

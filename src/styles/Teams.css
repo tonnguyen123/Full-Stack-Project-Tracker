@@ -1,0 +1,82 @@
+.CreateTeam {
+  top: 100px;
+  left: 30%;
+  width: 40%;
+  position: fixed;
+  flex-direction: column;
+  background-color: rgb(215, 238, 9);
+    
+}
+
+
+
+.CreateTeam .CreateamForm{
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.AllTeams .TeamsInfo{
+    padding: 10px;
+    max-height: 80%;  
+   
+    
+}
+
+@media (max-height: 1100px) {
+    .AllTeams .TeamsInfo {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+  }
+  
+
+
+.CreateTeam .createTeamTitle{
+    background-color: rgb(157, 157, 248);
+    display: flex;
+    justify-content: center;
+}
+
+
+.AllTeams{
+  top:400px;
+  left: 30%;
+  width: 40%;
+  position: fixed;
+  flex-direction: column;
+  background-color: azure;
+  
+  
+}
+
+
+
+.AllTeams .TeamsInfo .EachTeam{
+    background-color: rgb(127, 175, 50);
+    margin-top: 5px;
+}
+
+.AllTeams .teamsTitle{
+    background-color: rgb(49, 187, 56);
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.CreateTeam input {
+    width: 250px;
+    background-color: white;
+    color: black;
+}
+
+.CreateTeam span{
+    font-weight: bold;
+}
+
+.CreateTeam select option{
+    background-color: white;
+    color: black;
+}

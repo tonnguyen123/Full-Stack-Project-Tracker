@@ -1,0 +1,129 @@
+.NavigationBar{
+    width: 100%;
+    top: 0;
+    position:fixed;
+    display:flex;
+    background-color: rgb(127, 255, 185);
+    justify-content: center;
+    gap: 10px;
+   
+    top:0;
+    left:0;
+}
+
+
+
+
+
+.NavigationBar button {
+    background: none;
+    border-color: rgb(158, 209, 215);
+    border: none;
+    border-radius: 0;
+    color: black;
+    transition: background-color 0.3s;
+  }
+
+  .NavigationBar .searchButton{
+    border: none;
+  }
+
+  .searchBox {
+    width: 100%;
+    padding: 8px;
+    margin: 5px;
+    max-width: 600px; 
+  }
+  
+  @media (min-width: 1000px) {
+    .searchBox {
+      width: 300px; /* Adjust to 50% width for medium and larger screens */
+    };
+
+  }
+
+  @media (max-width: 670px) {
+    .NavigationBar button.home-button {
+      display: none;
+    }
+    .NavigationBar .searchBox{
+      width: 100px;
+    }
+
+  
+    .NavigationBar i.nav-icon {
+      font-size: 8px;
+    }
+  
+    .NavigationBar span.title {
+      display: none;
+    }
+
+
+    .NavigationBar .dropdown-container .dropdown button{
+      font-size: 8px;
+    }
+  }
+  
+  .NavigationBar button:hover {
+    background-color: #046916; /* slightly lighter on hover */
+    
+  }
+
+  .NavigationBar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    gap: 10px;
+    background-color: rgb(127, 255, 185);
+    padding: 5px;
+    z-index: 10;
+  }
+  
+  .NavigationBar button {
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    min-width: 160px;
+  }
+  
+  .dropdown button {
+    padding: 10px;
+    border: none;
+    background-color: white;
+    text-align: left;
+  }
+  
+  .dropdown button:hover {
+    background-color: #f0f0f0;
+  }
+
+
+  .red-dot {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    border-radius: 50%;
+  }

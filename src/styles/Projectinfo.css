@@ -1,0 +1,67 @@
+.userTable{
+    width: 80%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    padding-top: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px;
+    height: 80%;
+
+  
+    overflow-y: auto;
+}
+
+
+.userTable table,
+.userTable th,
+.userTable td {
+  border: 1px solid black;
+}
+
+h3 {
+    color: black;
+}
+
+span {
+    color: black;
+}
+
+.userTable table{
+    border-collapse: collapse;
+}
+
+.userTable table thead th{
+    background-color: aquamarine;
+    color: black;
+    text-align: center;
+}
+
+.userTable tbody td{
+    text-align: center;
+    color: black;
+    background-color: white;
+    border-color: black;
+    border-radius: 10px;
+    
+}
+
+.userTable tbody {
+    justify-content: space-evenly;
+}
+
+
+.addTaskButton:hover {
+    background-color: rgb(16, 14, 69);
+}
+
+.addTaskButton {
+    background-color: blue;
+}
+
+
+.memberButton{
+    background-color: rgb(176, 174, 174);
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
