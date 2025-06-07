@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import "/Project and Study Tracker/project-tracker/src/styles/Projects.css";
+import "../styles/Projects.css";
 import { useNavigate} from 'react-router-dom';
 import { NavigationBar } from './NavigationBar';
 import { Project } from '../types';
