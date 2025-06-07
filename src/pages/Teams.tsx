@@ -1,7 +1,7 @@
 import { Project, Team, User } from '../types';
 import { NavigationBar } from './NavigationBar';
 import { useState, useEffect } from 'react';
-import '/Project and Study Tracker/project-tracker/src/styles/Teams.css';
+import '../styles/Teams.css';
 import { useNavigate, Link} from 'react-router-dom';
 
 export const Teams = () => {
