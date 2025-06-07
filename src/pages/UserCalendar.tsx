@@ -6,7 +6,7 @@ type Value = ValuePiece | [ValuePiece, ValuePiece];
 
 import 'react-calendar/dist/Calendar.css';
 
-import '/Project and Study Tracker/project-tracker/src/styles/Usercalendar.css';
+import '../styles/Usercalendar.css';
 import { NavigationBar } from './NavigationBar';
 
 import { Project, Task } from '../types';
