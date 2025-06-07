@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavigationBar } from './NavigationBar';
-import '../styles/CreateProject.css';
+import '../styles/Createproject.css';
 
 export const CreateProject = () => {
   const [showTable, setShow] = useState(false);
