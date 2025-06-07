@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '/Project and Study Tracker/project-tracker/src/styles/Update_Profile.css';
+import '../styles/Update_Profile.css';
 import { NavigationBar } from './NavigationBar';
 
 export const UpdateProfile = () => {
