@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import "/Project and Study Tracker/project-tracker/src/styles/Navigationbar.css";
+import '../styles/Navigationbar.css';
 import { Notification } from '../types';
 
 
