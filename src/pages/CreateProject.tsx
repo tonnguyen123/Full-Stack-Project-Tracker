@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavigationBar } from './NavigationBar';
-import '/Project and Study Tracker/project-tracker/src/styles/Createproject.css';
+import '../styles/CreateProject.css';
 
 export const CreateProject = () => {
   const [showTable, setShow] = useState(false);
