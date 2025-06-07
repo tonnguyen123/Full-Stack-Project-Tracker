@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { NavigationBar } from './NavigationBar'
 import { useParams } from 'react-router-dom'
 import { Project, Task, TaskProgress } from '../types';
-import '/Project and Study Tracker/project-tracker/src/styles/Projectinfo.css';
+import '../styles/Projectinfo.css';
 import ProgressChart from './TaskProgress';
 
 export const ProjectInfo = () => {
