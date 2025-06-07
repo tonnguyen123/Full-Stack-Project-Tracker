@@ -1,7 +1,7 @@
 import { useState, useEffect , useRef }from "react";
 import { useParams } from "react-router-dom"
 import { NavigationBar } from "./NavigationBar";
-import '/Project and Study Tracker/project-tracker/src/styles/MemberProfile.css'
+import '../styles/MemberProfile.css'
 import { Message } from "../types";
 
 
