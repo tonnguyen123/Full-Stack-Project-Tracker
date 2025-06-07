@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '/Project and Study Tracker/project-tracker/src/styles/RegisterStyle.css';
+import '../styles/RegisterStyle.css';
 import { useNavigate } from 'react-router-dom';
 
 
