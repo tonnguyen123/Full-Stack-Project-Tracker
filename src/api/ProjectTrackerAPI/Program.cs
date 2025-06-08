@@ -56,9 +56,16 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowLocalhost", policy =>
     {
-        policy.WithOrigins("http://localhost:3000","http://localhost:5173", "https://localhost:5173","https://full-stack-project-tracker.onrender.com") // Allow both HTTP & HTTPS
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        
+        policy.WithOrigins(
+            "http://localhost:3000",
+            "http://localhost:5173",
+            "https://localhost:5173",
+            "https://full-stack-ton-project-trackers.netlify.app" // ✅ real frontend domain
+            )
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+
     });
 });
 
