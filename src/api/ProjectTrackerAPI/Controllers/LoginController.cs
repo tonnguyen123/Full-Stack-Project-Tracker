@@ -69,8 +69,8 @@ public async Task<IActionResult> LoginUser([FromBody] LoginRequest login)
     }
     catch (Exception ex)
     {
-        Console.WriteLine($"Login error: {ex.Message}");
-        return StatusCode(500, $"Internal server error: {ex.Message}");
+        Console.WriteLine("Login failed: " + ex.Message); // Log the reason
+        return StatusCode(500, new { error = "Internal Server Error", details = ex.Message });
     }
 }
 
