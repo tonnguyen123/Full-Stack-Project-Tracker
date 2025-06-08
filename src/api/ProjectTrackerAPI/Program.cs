@@ -82,14 +82,6 @@ builder.Services.AddScoped<EmailPasswordLink>();
 
 var app = builder.Build();
 
-app.Use(async (context, next) =>
-{
-    context.Response.Headers.Add("Access-Control-Allow-Origin", "*");
-    await next.Invoke();
-});
-
-context.Response.Headers.Add("Access-Control-Allow-Origin", "https://full-stack-ton-project-trackers.netlify.app");
-
 
 
 app.UseStaticFiles(); 
