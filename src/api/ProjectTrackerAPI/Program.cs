@@ -54,7 +54,7 @@ builder.Services.AddDbContext<ProjectDbContext>(option => option.UseMySql(connec
 // Register services in the container.
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowLocalhost", policy =>
+    options.AddPolicy("AllowAll", policy =>
     {
         
         policy.WithOrigins(
@@ -84,7 +84,7 @@ var app = builder.Build();
 
 app.UseStaticFiles(); 
 
-app.UseCors("AllowLocalhost");
+app.UseCors("AllowAll");
 app.UseAuthentication();
 app.UseAuthorization();
 
