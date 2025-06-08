@@ -48,7 +48,7 @@ builder.Services.AddControllers()
 
 builder.Services.AddDbContext<ProjectDbContext>(option => option.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 //builder.Services.AddDbContext<ProjectDbContext>(options =>
-    options.UseSqlite("Data Source=projecttracker.db"));
+    //options.UseSqlite("Data Source=projecttracker.db"));
 
 
 // Register services in the container.
