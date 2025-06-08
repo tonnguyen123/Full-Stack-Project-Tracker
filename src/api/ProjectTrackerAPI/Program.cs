@@ -94,7 +94,11 @@ app.MapControllers();
 app.MapGet("/", () => "Backend is running!");
 
 
-
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ProjectDbContext>();
+    db.Database.EnsureCreated();
+}
 
 
 app.MapControllers();
