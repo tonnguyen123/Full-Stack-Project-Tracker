@@ -46,8 +46,8 @@ builder.Services.AddControllers()
         x.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles);
 
 
-//builder.Services.AddDbContext<ProjectDbContext>(option => option.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
-builder.Services.AddDbContext<ProjectDbContext>(options =>
+builder.Services.AddDbContext<ProjectDbContext>(option => option.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+//builder.Services.AddDbContext<ProjectDbContext>(options =>
     options.UseSqlite("Data Source=projecttracker.db"));
 
 
