@@ -31,7 +31,7 @@ namespace ProjectTrackerAPI.Controllers
             return Ok(users);
         }
 
-[HttpPost]
+[HttpPost("")]
 public async Task<IActionResult> LoginUser([FromBody] LoginRequest login)
 {
     try
