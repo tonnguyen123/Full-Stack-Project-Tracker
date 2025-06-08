@@ -52,7 +52,7 @@ export const CreateProject = () => {
       
 
       try {
-        const response = await fetch('http://localhost:5041/api/CreateTask',{
+        const response = await fetch('https://full-stack-project-tracker.onrender.com/api/CreateTask',{
           method: 'POST',
           headers:{
             'Content-Type': 'application/json'
@@ -84,7 +84,7 @@ export const CreateProject = () => {
 
 
     try {
-      const response = await fetch('http://localhost:5041/api/ProjectId', {
+      const response = await fetch('https://full-stack-project-tracker.onrender.com/api/ProjectId', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(CurrentProject)
@@ -131,7 +131,7 @@ export const CreateProject = () => {
         
 
           try {
-            const response = await fetch('http://localhost:5041/api/CreateProject',{
+            const response = await fetch('https://full-stack-project-tracker.onrender.com/api/CreateProject',{
               method: 'POST',
               headers:{
                 'Content-Type': 'application/json'
@@ -187,7 +187,7 @@ export const CreateProject = () => {
     else if(index === 0){
       if(window.confirm("Would you like to delete this Project " + ProjectName + "?")){
         try {
-          const response = await fetch(`http://localhost:5041/api/projects/delete/${UserID}/${ProjectName}`,{
+          const response = await fetch(`https://full-stack-project-tracker.onrender.com/api/projects/delete/${UserID}/${ProjectName}`,{
             method: 'POST',
             headers:{
               'Content-Type': 'application/json',
