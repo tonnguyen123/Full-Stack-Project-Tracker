@@ -7,7 +7,8 @@ export const Login = () => {
     const [typedPass,setPass] = useState('');
     const navigate = useNavigate();
 
-    const baseUrl = import.meta.env.SERVER_URL;
+    const baseUrl = import.meta.env.VITE_SERVER_URL;
+
 
 
     
