@@ -14,7 +14,7 @@ export const Teams = () => {
     const [ChosenProject, SetProject] = useState("");
     const [UsersTeams, SetUsersTeams] = useState<Team[]>([]);
     const [SharedTeams, SetSharedTeams] = useState<Team[]>([]);
-
+     const baseUrl = import.meta.env.VITE_SERVER_URL;
 
 
     
@@ -23,7 +23,7 @@ export const Teams = () => {
     const fetchProjects = async() =>{
         
         try {
-          const response = await fetch(`http://localhost:5041/api/projects/${UserID}`,{
+          const response = await fetch(`${baseUrl}/api/projects/${UserID}`,{
             method: 'GET',
             headers:{
               'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ export const Teams = () => {
             ProjectIds: [parseInt(ChosenProject)]
         }
         try {
-            const response = await fetch(`http://localhost:5041/api/CreateTeam`,{
+            const response = await fetch(`${baseUrl}/api/CreateTeam`,{
                 method: 'POST',
                 headers:{
                   'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ export const Teams = () => {
 
       const fetchTeams = async() =>{
         try {
-            const response = await fetch(`http://localhost:5041/api/CreateTeam/get-teams/${UserID}`,{
+            const response = await fetch(`${baseUrl}/api/CreateTeam/get-teams/${UserID}`,{
                 method: 'GET',
                 headers:{
                     'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ export const Teams = () => {
 
       const fetchSharedTeams = async() => {
         try {
-          const response = await fetch(`http://localhost:5041/api/CreateTeam/get-shared-teams/${UserID}`,{
+          const response = await fetch(`${baseUrl}/api/CreateTeam/get-shared-teams/${UserID}`,{
               method: 'GET',
               headers:{
                   'Content-Type': 'application/json',
@@ -157,7 +157,7 @@ export const Teams = () => {
         }
         if(window.confirm('Would you like to delete the project ' + teamName +"?"))
         try {
-            const response = await fetch(`http://localhost:5041/api/CreateTeam/delete`,{
+            const response = await fetch(`${baseUrl}/api/CreateTeam/delete`,{
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json',
@@ -198,7 +198,7 @@ export const Teams = () => {
 
       const GetOwner = async (ownerId: number) => {
         try {
-          const response = await fetch(`http://localhost:5041/api/CreateTeam/get-team-owner/${ownerId}`, {
+          const response = await fetch(`${baseUrl}/api/CreateTeam/get-team-owner/${ownerId}`, {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
