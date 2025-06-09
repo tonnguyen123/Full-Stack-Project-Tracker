@@ -16,12 +16,15 @@ export const NavigationBar = () => {
      
       const [notificationList,setNotificationList] = useState<Notification[]>([]);
       const[AllRead,setAllRead] = useState(false);
+
+
+      const baseUrl = import.meta.env.VITE_SERVER_URL;
       
         const navigate = useNavigate();
 
         const fetchNotifications = async () => {
           try {
-            const response = await fetch(`http://localhost:5041/api/messages/get-notifications/${ReceiverID}`, {
+            const response = await fetch(`${baseUrl}/api/messages/get-notifications/${ReceiverID}`, {
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json',
@@ -112,7 +115,7 @@ export const NavigationBar = () => {
 
           const markasRead = async(notification: Notification) => {
             try {
-              const response = await fetch('http://localhost:5041/api/messages/mark-as-read',{
+              const response = await fetch(`${baseUrl}/api/messages/mark-as-read`,{
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
