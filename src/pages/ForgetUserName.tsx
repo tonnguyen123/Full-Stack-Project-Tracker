@@ -4,12 +4,13 @@ import { useNavigate } from 'react-router-dom';
 export const ForgetUserName = () => {
     const navigate = useNavigate();
     const [YourEmail,setEmail] = useState('');
+    const baseUrl = import.meta.env.VITE_SERVER_URL;
     const sendUserName = async() =>{
         const User = {
             Email: YourEmail
         }
         try {
-            const response = await fetch('http://localhost:5041/api/SendUserName',{
+            const response = await fetch(`${baseUrl}/api/SendUserName`,{
                 method:'POST',
                 headers:{
                     'Content-Type' : 'application/json'
