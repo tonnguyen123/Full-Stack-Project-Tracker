@@ -14,6 +14,8 @@ export const MemberProfile = () => {
     const [currentUser, setCurrentUser] = useState<number | null>(null);
     const fileInputRef = useRef<HTMLInputElement | null>(null);
 
+     const baseUrl = import.meta.env.VITE_SERVER_URL;
+
 
 
     const [showEmailOptions, setShowEmailOptions] = useState(false);
@@ -67,7 +69,7 @@ export const MemberProfile = () => {
             sendMessage();
           }
       
-          const response = await fetch("http://localhost:5041/api/messages/send-with-file", {
+          const response = await fetch(`${baseUrl}/api/messages/send-with-file`, {
             method: "POST",
             body: formData,
           });
@@ -134,10 +136,10 @@ export const MemberProfile = () => {
             IsRead: false,
             CreatedAt: new Date().toISOString(),
             Message: localStorage.getItem("yourUserName") + " sent you a message.",
-            NotificationLink: "http://localhost:5173/member/" + username + "/view=true"
+            NotificationLink: baseUrl + "/" + username + "/view=true"
           };
       
-          const response = await fetch('http://localhost:5041/api/messages/send-notification', {
+          const response = await fetch(`${baseUrl}/api/messages/send-notification`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(Notification)
@@ -170,7 +172,7 @@ export const MemberProfile = () => {
                 ReceiverId: receiver,
 
             }
-            const response = await fetch('http://localhost:5041/api/messages',{
+            const response = await fetch(`${baseUrl}/api/messages`,{
                 method: 'POST',
                 headers:{'Content-Type': 'application/json' },
                 body: JSON.stringify(MsgInfo)
@@ -198,7 +200,7 @@ export const MemberProfile = () => {
                 ReceiverId: receiver,
 
             }
-            const response = await fetch('http://localhost:5041/api/messages/get-messages',{
+            const response = await fetch(`${baseUrl}/api/messages/get-messages`,{
                 method: 'POST',
                 headers:{'Content-Type': 'application/json'},
                 body: JSON.stringify(MsgInfo)
