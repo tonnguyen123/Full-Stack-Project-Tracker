@@ -11,6 +11,8 @@ const ResetPassword = () => {
     const queryParams = new URLSearchParams(location.search);
     const token = queryParams.get('token');
 
+     const baseUrl = import.meta.env.VITE_SERVER_URL;
+
     const handleSubmit = async () => {
         const validPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
         if(!validPass){
@@ -27,7 +29,7 @@ const ResetPassword = () => {
                 Token: token,
                 NewPassword: password
             }
-            const response = await fetch('http://localhost:5041/api/resetpassword/reset-password', {
+            const response = await fetch(`${baseUrl}/api/resetpassword/reset-password`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
