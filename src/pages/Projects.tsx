@@ -51,7 +51,7 @@ export const Projects = () => {
 
       }
     } catch (error) {
-      alert("Error fetching projects.");
+      console.log("Error fetching projects.");
     }
 
   };
@@ -77,7 +77,7 @@ export const Projects = () => {
 
       }
     } catch (error) {
-      alert("Error fetching projects.");
+      console.log("Error fetching projects.");
     }
 
   };
@@ -109,7 +109,7 @@ export const Projects = () => {
   
         }
       } catch (error) {
-        alert("Error deletion of project.");
+        console.log("Error deletion of project.");
       }
 
     }
