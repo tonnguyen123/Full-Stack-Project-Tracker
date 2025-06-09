@@ -7,6 +7,9 @@ export const Login = () => {
     const [typedPass,setPass] = useState('');
     const navigate = useNavigate();
 
+    const baseUrl = import.meta.env.VITE_API_BASE_URL;
+
+
     
 
     const verifyUserLogin = async() => {
@@ -19,7 +22,7 @@ export const Login = () => {
         console.log("Sending login:", UserLogin);
     
         try {
-            const response = await fetch ('https://full-stack-project-tracker.onrender.com/api/login',{
+            const response = await fetch (`${baseUrl}/api/login`,{
                 method: 'POST',
                 headers:{
                     'Content-Type': 'application/json',
