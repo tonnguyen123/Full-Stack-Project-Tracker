@@ -14,7 +14,7 @@ export const Projects = () => {
   const [SharedProjects, setSharedProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(false);
 
-
+  const baseUrl = import.meta.env.VITE_API_BASE_URL;
   const navigate = useNavigate();
 
 
@@ -35,7 +35,7 @@ export const Projects = () => {
     //setLoading(true);
     
     try {
-      const response = await fetch(`http://localhost:5041/api/projects/${UserID}`,{
+      const response = await fetch(`${baseUrl}/api/projects/${UserID}`,{
         method: 'GET',
         headers:{
           'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ export const Projects = () => {
     //setLoading(true);
     
     try {
-      const response = await fetch(`http://localhost:5041/api/projects/shared-projects/${UserID}`,{
+      const response = await fetch(`${baseUrl}/api/projects/shared-projects/${UserID}`,{
         method: 'GET',
         headers:{
           'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ export const Projects = () => {
 
     if(window.confirm("Do you want to delete project " + name)){
       try {
-        const response = await fetch(`http://localhost:5041/api/projects/delete/${UserID}/${name}`,{
+        const response = await fetch(`${baseUrl}/api/projects/delete/${UserID}/${name}`,{
           method: 'POST',
           headers:{
             'Content-Type': 'application/json',
