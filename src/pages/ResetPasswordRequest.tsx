@@ -4,12 +4,13 @@ import { useNavigate } from 'react-router-dom';
 export const ResetPasswordRequest = () => {
     const navigate = useNavigate();
     const [YourEmail,setEmail] = useState('');
+    const baseUrl = import.meta.env.VITE_SERVER_URL;
     const sendResetLink = async() =>{
         const PasswordRequestModel = {
             Email: YourEmail
         }
         try {
-            const response = await fetch('http://localhost:5041/api/resetpassword/request-password-reset',{
+            const response = await fetch(`${baseUrl}/api/resetpassword/request-password-reset`,{
                 method:'POST',
                 headers:{
                     'Content-Type' : 'application/json'
