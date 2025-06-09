@@ -19,6 +19,8 @@ export const ProjectInfo = () => {
   const [updatedDescription, setUpdatedDescription] = useState('');
   const [updatedDue, setUpdatedDue] = useState('');
 
+  const baseUrl = import.meta.env.VITE_SERVER_URL;
+
  
 
 
@@ -69,7 +71,7 @@ export const ProjectInfo = () => {
       ProjectName: projectName
     }
     try {
-      const response = await fetch('http://localhost:5041/api/ProjectId/project', {
+      const response = await fetch(`${baseUrl}/api/ProjectId/project`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(CurrentProject)
@@ -119,7 +121,7 @@ export const ProjectInfo = () => {
         UserID: Number(currentUser)
       
       }
-      const response = await fetch('http://localhost:5041/api/projects/update-percentage',{
+      const response = await fetch(`${baseUrl}/api/projects/update-percentage`,{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(Percentage)
@@ -160,7 +162,7 @@ export const ProjectInfo = () => {
     };
   
     try {
-      const response = await fetch('http://localhost:5041/api/CreateTask', {
+      const response = await fetch(`${baseUrl}/api/CreateTask`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updated)
@@ -196,7 +198,7 @@ export const ProjectInfo = () => {
             NotificationLink: "http://localhost:5173/shared-project/" + projectName + "/view=true"
           };
       
-          const response = await fetch('http://localhost:5041/api/messages/send-notification', {
+          const response = await fetch(`${baseUrl}/api/messages/send-notification`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(Notification)
@@ -221,7 +223,7 @@ export const ProjectInfo = () => {
       ProjectName: projectName
     }
     try {
-      const response = await fetch('http://localhost:5041/api/tasks', {
+      const response = await fetch(`${baseUrl}/api/tasks`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(CurrentProject)
@@ -274,7 +276,7 @@ export const ProjectInfo = () => {
     }
   
     try {
-      const response = await fetch('http://localhost:5041/api/ProjectId/update', {
+      const response = await fetch(`${baseUrl}/api/ProjectId/update`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(UpdatedProject),
@@ -319,7 +321,7 @@ export const ProjectInfo = () => {
           OwnerId:currentUser
           
         }
-        const response = await fetch('http://localhost:5041/api/CreateTeam/delete-member',{
+        const response = await fetch(`${baseUrl}/api/CreateTeam/delete-member`,{
           method: 'POST',
           headers:{
             'Content-Type': 'application/json'
@@ -354,7 +356,7 @@ export const ProjectInfo = () => {
     if(index === 0){
       if(window.confirm("Would you like to delete this Project " + projectName + "?")){
         try {
-          const response = await fetch(`http://localhost:5041/api/projects/delete/${currentUser}/${projectName}`,{
+          const response = await fetch(`${baseUrl}/api/projects/delete/${currentUser}/${projectName}`,{
             method: 'POST',
             headers:{
               'Content-Type': 'application/json',
@@ -386,7 +388,7 @@ export const ProjectInfo = () => {
       };
       
       try {
-        const response = await fetch('http://localhost:5041/api/tasks/delete', {
+        const response = await fetch(`${baseUrl}/api/tasks/delete`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',
@@ -419,7 +421,7 @@ export const ProjectInfo = () => {
     };
   
     try {
-      const response = await fetch('http://localhost:5041/api/CreateTeam/add-member-to-team', {
+      const response = await fetch(`${baseUrl}/api/CreateTeam/add-member-to-team`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
