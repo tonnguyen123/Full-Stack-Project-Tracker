@@ -14,7 +14,7 @@ export const Register = () => {
   const [hideBackground, setHide] = useState(false);
   const [typedCode, setTyped] = useState('');
   const navigate = useNavigate();
-
+  const baseUrl = import.meta.env.VITE_SERVER_URL;
   
 
 
@@ -55,7 +55,7 @@ export const Register = () => {
 
     try {
       // Make a POST request to the backend API
-      const response = await fetch('http://localhost:5041/api/register/register', {
+      const response = await fetch(`${baseUrl}/api/register/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ export const Register = () => {
 
 
   const verifyUser = async () => {
-    const response = await fetch('http://localhost:5041/api/register/verify', {
+    const response = await fetch(`${baseUrl}/api/register/verify`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
