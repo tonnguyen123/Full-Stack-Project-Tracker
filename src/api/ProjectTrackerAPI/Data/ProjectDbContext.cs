@@ -21,6 +21,7 @@ namespace ProjectTrackerAPI.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            
             modelBuilder.Entity<User>()
                 .HasMany(u => u.Projects)
                 .WithOne(p => p.User)
@@ -96,6 +97,12 @@ namespace ProjectTrackerAPI.Data
                     .WithMany()
                     .HasForeignKey("TeamsId"));   // <-- actual column name in your DB
 
+            modelBuilder.Entity<User>().ToTable("users"); 
+            modelBuilder.Entity<Project>().ToTable("projects");
+            modelBuilder.Entity<TaskItem>().ToTable("tasks");
+            modelBuilder.Entity<Team>().ToTable("teams");
+            modelBuilder.Entity<Message>().ToTable("messages");
+            modelBuilder.Entity<Notification>().ToTable("notifications");
 
             base.OnModelCreating(modelBuilder);
         }
