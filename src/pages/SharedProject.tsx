@@ -20,6 +20,8 @@ export const SharedProject = () => {
   const [updatedDue, setUpdatedDue] = useState('');
    const [tasks,setTasks] = useState<TaskProgress[]>([]);
 
+  const baseUrl = import.meta.env.VITE_SERVER_URL;
+
  
 
  
@@ -68,7 +70,7 @@ export const SharedProject = () => {
       ProjectName: projectName
     }
     try {
-      const response = await fetch('http://localhost:5041/api/ProjectId/project', {
+      const response = await fetch(`${baseUrl}/api/ProjectId/project`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(CurrentProject)
@@ -112,7 +114,7 @@ export const SharedProject = () => {
     };
   
     try {
-      const response = await fetch('http://localhost:5041/api/CreateTask', {
+      const response = await fetch(`${baseUrl}/api/CreateTask`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updated)
@@ -141,7 +143,7 @@ export const SharedProject = () => {
       ProjectName: projectName
     }
     try {
-      const response = await fetch('http://localhost:5041/api/tasks', {
+      const response = await fetch(`${baseUrl}/api/tasks`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(CurrentProject)
@@ -190,7 +192,7 @@ export const SharedProject = () => {
     }
   
     try {
-      const response = await fetch('http://localhost:5041/api/ProjectId/update', {
+      const response = await fetch(`${baseUrl}/api/ProjectId/update`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(UpdatedProject),
@@ -237,7 +239,7 @@ export const SharedProject = () => {
           OwnerId:currentUser
           
         }
-        const response = await fetch('http://localhost:5041/api/CreateTeam/delete-member',{
+        const response = await fetch(`${baseUrl}/api/CreateTeam/delete-member`,{
           method: 'POST',
           headers:{
             'Content-Type': 'application/json'
@@ -272,7 +274,7 @@ export const SharedProject = () => {
     if(index === 0){
       if(window.confirm("Would you like to delete this Project " + projectName + "?")){
         try {
-          const response = await fetch(`http://localhost:5041/api/projects/delete/${currentUser}/${projectName}`,{
+          const response = await fetch(`${baseUrl}/api/projects/delete/${currentUser}/${projectName}`,{
             method: 'POST',
             headers:{
               'Content-Type': 'application/json',
@@ -304,7 +306,7 @@ export const SharedProject = () => {
       };
       
       try {
-        const response = await fetch('http://localhost:5041/api/tasks/delete', {
+        const response = await fetch(`${baseUrl}/api/tasks/delete`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',
@@ -337,7 +339,7 @@ export const SharedProject = () => {
     };
   
     try {
-      const response = await fetch('http://localhost:5041/api/CreateTeam/add-member-to-team', {
+      const response = await fetch(`${baseUrl}/api/CreateTeam/add-member-to-team`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
