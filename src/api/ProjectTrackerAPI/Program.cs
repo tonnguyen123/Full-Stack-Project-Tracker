@@ -19,6 +19,11 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 var jwtKey = builder.Configuration["Jwt:Key"] ?? "your_fallback_secret_key_here";
+
+var jwtIssuer = builder.Configuration["Jwt:Issuer"] ?? "default_issuer";
+var jwtAudience = builder.Configuration["Jwt:Audience"] ?? "default_audience";
+
+
 var key = Encoding.ASCII.GetBytes(jwtKey);
 
 builder.Services.AddAuthentication(options =>
@@ -35,11 +40,14 @@ builder.Services.AddAuthentication(options =>
     {
         ValidateIssuerSigningKey = true,
         IssuerSigningKey = new SymmetricSecurityKey(key),
-        ValidateIssuer = false,
-        ValidateAudience = false,
+        ValidateIssuer = true,
+        ValidIssuer = jwtIssuer,
+        ValidateAudience = true,
+        ValidAudience = jwtAudience,
         ClockSkew = TimeSpan.Zero
     };
 });
+
 
 builder.Services.AddControllers()
     .AddJsonOptions(x =>
