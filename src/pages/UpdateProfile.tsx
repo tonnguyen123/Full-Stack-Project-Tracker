@@ -23,6 +23,8 @@ export const UpdateProfile = () => {
     console.log(userID);
     console.log(ButtonText);
 
+    const baseUrl = import.meta.env.VITE_SERVER_URL;
+
     const SendEmail = async () => {
         
     
@@ -35,7 +37,7 @@ export const UpdateProfile = () => {
     
         try {
           // Make a POST request to the backend API
-          const response = await fetch('http://localhost:5041/api/passwordchange/send-email', {
+          const response = await fetch(`${baseUrl}/api/passwordchange/send-email`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -66,7 +68,7 @@ export const UpdateProfile = () => {
 
         try {
           // Make a POST request to the backend API
-          const response = await fetch('http://localhost:5041/api/passwordchange/verify-code', {
+          const response = await fetch(`${baseUrl}/api/passwordchange/verify-code`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -116,7 +118,7 @@ export const UpdateProfile = () => {
       };
     
       try {
-        const response = await fetch('http://localhost:5041/api/passwordchange/password-change', {
+        const response = await fetch(`${baseUrl}/api/passwordchange/password-change`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -167,7 +169,7 @@ export const UpdateProfile = () => {
 
 
         try {
-          const response = await fetch('http://localhost:5041/api/updateemail/save-email', {
+          const response = await fetch(`${baseUrl}/api/updateemail/save-email`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -206,7 +208,7 @@ export const UpdateProfile = () => {
         VerificationCode: ''
       }
       try {
-        const response = await fetch('http://localhost:5041/api/updateemail/send-email', {
+        const response = await fetch(`${baseUrl}/api/updateemail/send-email`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
