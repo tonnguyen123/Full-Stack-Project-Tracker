@@ -21,7 +21,7 @@ export const UserCalendar = () => {
   const [dragDate, setDragDate] = useState<string | null>(null);
   const [editingTaskId, setEditingTaskId] = useState<number | null>(null);
 
-
+  const baseUrl = import.meta.env.VITE_SERVER_URL;
   
 
   const UserID = localStorage.getItem('userid');
@@ -34,7 +34,7 @@ export const UserCalendar = () => {
   const fetchProjects = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:5041/api/projects/${UserID}`, {
+      const response = await fetch(`${baseUrl}/api/projects/${UserID}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ export const UserCalendar = () => {
     };
   
     try {
-      const response = await fetch('http://localhost:5041/api/tasks', {
+      const response = await fetch(`${baseUrl}/api/tasks`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(currentProject),
@@ -161,7 +161,7 @@ export const UserCalendar = () => {
 
   const fetchIndividualTasks = async () => {
     try {
-      const response = await fetch(`http://localhost:5041/api/tasks/individual-tasks/${UserID}`, {
+      const response = await fetch(`${baseUrl}/api/tasks/individual-tasks/${UserID}`, {
         method: 'GET',
         headers: {
           'Content-type': 'application/json',
@@ -284,7 +284,7 @@ export const UserCalendar = () => {
           };
 
           try {
-            const response = await fetch('http://localhost:5041/api/CreateTask',{
+            const response = await fetch(`${baseUrl}/api/CreateTask`,{
               method: 'POST',
               headers:{
                 'Content-Type': 'application/json'
@@ -336,7 +336,7 @@ export const UserCalendar = () => {
       };
     
       try {
-        const response = await fetch('http://localhost:5041/api/tasks/delete', {
+        const response = await fetch(`${baseUrl}/api/tasks/delete`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json'
@@ -381,7 +381,7 @@ export const UserCalendar = () => {
         };
     
         try {
-          const response = await fetch('http://localhost:5041/api/CreateTask', {
+          const response = await fetch(`${baseUrl}/api/CreateTask`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
