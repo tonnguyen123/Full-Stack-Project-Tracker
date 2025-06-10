@@ -1,4 +1,4 @@
-I deployed and hosted the website on free server on Render and MySQL on Clever Cloud so there will be delay in processing requests due to limit of Free User
+I deployed and hosted the website on free server on Render and MySQL on Clever Cloud so there will be delay in processing requests due to limit of Free User. When you sign up, the email for registration and verification will take a little bit time because of Free sever delay and check in the Spam of your email if you don't see it in Inbox section
 
 The deployed website:
 https://full-stack-ton-project-trackers.netlify.app/login
