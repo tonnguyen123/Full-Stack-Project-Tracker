@@ -31,7 +31,7 @@ export const Login = () => {
                 body: JSON.stringify(UserLogin),
             });
             const result = await response.json();
-            console.log(result);
+       
             
             if(response.ok){
                 localStorage.setItem("token", result.token);
